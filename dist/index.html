@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wishlist</title>
+    <!-- links -->
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+    <!-- car form -->
+    <section id="form-container">
+        <form id="submitForm">
+            <h3 class="form-group" id="form-header">Add to list</h3>
+            <div class="form-group">
+                <label for="car-make-input">Make:</label>
+                <input 
+                    id="car-make-input" 
+                    name="car-make-input" 
+                    type="text" 
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="car-model-input">Model:</label>
+                <input 
+                    id="car-model-input" 
+                    name="car-model-input" 
+                    type="text" 
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="car-year-input">Year:</label>
+                <input 
+                    id="car-year-input" 
+                    name="car-year-input" 
+                    type="text" 
+                    required
+                />   
+            </div>
+            <div class="form-group" id="btn-container">
+                <button class="btn" id="submitBtn">Add</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- wishlist -->
+    <section id="wishlist">
+        <div id="wishlist-container">
+            <h3 id="wishlist-header">Car Wishlist</h3>
+            <ul id="ul"></ul>
+        </div>
+
+        <!-- selected -->
+        <div id="car-card-container">
+            <div id="car-card">
+                <h3 id="card-name">Vehicle</h3>
+                <p id="car-card-make">Make</p>
+                <p id="car-card-model">Model</p>
+                <p id="car-card-year">Year</p>
+                <button class="btn" id="removeBtn" disabled>Remove</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
