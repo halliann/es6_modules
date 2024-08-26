@@ -29,10 +29,12 @@ function updateDOMList() {
 
     wishlist.list.forEach((car) => {
         let newLi = document.createElement('li');
-        newLi.textContent = `${car.make} ${car.model}`;
+        newLi.textContent = `${car.make}, ${car.model}`;
         newLi.addEventListener('click', () => showCarDetails(car));
         ul.appendChild(newLi);
     });
+
+    clearFormInput();
 };
 
 function showCarDetails(car) {
@@ -42,7 +44,6 @@ function showCarDetails(car) {
     removeBtn.disabled = false;
     removeBtn.setAttribute('data-carId', car.id);
 };
-
 
 function addCar(event) {
     event.preventDefault();
@@ -64,8 +65,14 @@ function removeCar(){
 
     updateDOMList();
 
-    carCardMake.textContent = "";
-    carCardModel.textContent = "";
-    carCardYear.textContent = "";
+    carCardMake.textContent = '';
+    carCardModel.textContent = '';
+    carCardYear.textContent = '';
     removeBtn.disabled = true;
+};
+
+function clearFormInput() {
+    carMakeInput.value = ''
+    carModelInput.value = ''
+    carYearInput.value = '';
 };
